@@ -1,0 +1,166 @@
+/* Загальні стилі */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.header, .footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.header__container, .footer__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header__logo img {
+    height: 50px;
+}
+
+.header__menu-list, .footer__menu-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.header__menu-item, .footer__menu-item {
+    margin-left: 20px;
+}
+
+.header__menu-link, .footer__menu-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.header__menu-link:hover, .footer__menu-link:hover {
+    text-decoration: underline;
+}
+
+.header__burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.header__burger span {
+    height: 3px;
+    width: 25px;
+    background-color: #fff;
+    margin-bottom: 5px;
+}
+
+.footer__copyright {
+    font-size: 14px;
+}
+
+/* Стилі для мобільних пристроїв */
+@media (max-width: 768px) {
+    .header__menu {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header__menu-list {
+        flex-direction: column;
+    }
+
+    .header__menu-item {
+        margin: 10px 0;
+    }
+
+    .header__burger {
+        display: flex;
+    }
+
+    .header__menu.active {
+        display: flex;
+    }
+}
+
+/* Стилі для основного вмісту */
+.content__section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.content__left, .content__right {
+    flex: 1;
+}
+
+.content__left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.content__icon img {
+    height: 50px;
+}
+
+.content__title {
+    font-size: 32px;
+    margin: 20px 0 10px;
+}
+
+.content__subtitle {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.content__text {
+    font-size: 16px;
+    margin: 10px 0 20px;
+}
+
+.content__button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.content__button:hover {
+    background-color: #555;
+}
+
+.content__right img {
+    width: 100%;
+    max-width: 500px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Стилі для мобільних пристроїв */
+@media (max-width: 768px) {
+    .content__section {
+        flex-direction: column;
+    }
+
+    .content__left, .content__right {
+        width: 100%;
+    }
+
+    .content__right img {
+        margin-top: 20px;
+    }
+}
